@@ -199,7 +199,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Username" name="firstname" type="text">
+                    <input class="form-control" placeholder="Username" name="firstname" type="text" required>
                   </div>
                 </div>
               
@@ -208,7 +208,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-user"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Full Names" name="lastname" type="text">
+                    <input class="form-control" placeholder="Full Names" name="lastname" type="text" required>
                   </div>
                 </div>
 
@@ -217,7 +217,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-phone"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Cell number" name="contact" type="text">
+                    <input class="form-control" placeholder="Cell number" name="contact" type="text" required>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" name="password" type="password">
+                    <input class="form-control" placeholder="Password" name="password" type="password" required>
                   </div>
                 </div>
 
@@ -237,7 +237,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Confirm Password" name="confirm" type="password">
+                    <input class="form-control" placeholder="Confirm Password" name="confirm" type="password" required>
                   </div>
                 </div>
 
@@ -246,7 +246,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Bank name" name="bank" type="text">
+                    <input class="form-control" placeholder="Bank name" name="bank" type="text" required>
                   </div>
                 </div>
 
@@ -256,7 +256,7 @@ if(isset($_POST['btn-signup']))
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Account number" name="account_no" type="text">
+                    <input class="form-control" placeholder="Account number" name="account_no" type="text" required>
                   </div>
                 </div>
 
