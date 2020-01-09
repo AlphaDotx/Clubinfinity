@@ -73,7 +73,7 @@ $contact = $row['Contact'];
                            
                                          
                                       <img src="logo.png" style="width:45px; margin-top:-45px;"> </div>
-                                 My <span style="color:#52BCD3;">Admin</span> </div>
+                                <span style="color:#52BCD3;">MyAdmin</span> </div>
                         </div>
                                    <nav class="menu">
                             <ul class="nav metismenu" id="sidebar-menu">
@@ -84,9 +84,10 @@ $contact = $row['Contact'];
                                     <a href=""> <i class="fa fa-arrows-h"></i> Assignment &nbsp; <i class="fa fa-caret-down"></i> </a>
                                     
                                     <ul>
-                                        <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                        <!-- <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								R200s
-    							</a> </li><li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                </a> </li> -->
+                                <li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								Withdrawn Funds
     							</a> </li>
                                     </ul>

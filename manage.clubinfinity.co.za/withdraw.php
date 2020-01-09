@@ -120,7 +120,7 @@ $pendingresult=mysql_query($pending);
                             <div class="brand">
                                 <div class="logo"> 
                                      <img src="logo.png" style="width:45px; margin-top:-45px;"> 
-                                    </div> My <span style="color:#52BCD3;">Admin</span> </div>
+                                    </div> <span style="color:#52BCD3;">MyAdmin</span> </div>
                         </div>
                         <nav class="menu">
                             <ul class="nav metismenu" id="sidebar-menu">

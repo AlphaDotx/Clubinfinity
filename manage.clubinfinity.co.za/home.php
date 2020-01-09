@@ -74,7 +74,7 @@ $contact = $row['Contact'];
                                     
                                      <img src="logo.png" style="width:45px; margin-top:-45px;"> 
                                      
-                                     </div> My <span style="color:#52BCD3;">Admin</span> </div>
+                                     </div> <span style="color:#52BCD3;">MyAdmin</span> </div>
                         </div>
                         <nav class="menu">
                             <ul class="nav metismenu" id="sidebar-menu">
@@ -85,9 +85,10 @@ $contact = $row['Contact'];
                                     <a href=""> <i class="fa fa-arrows-h"></i> Assignment &nbsp; <i class="fa fa-caret-down"></i> </a>
                                     
                                     <ul>
-                                        <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                        <!-- <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								R200s
-    							</a> </li><li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                </a> </li> -->
+                                <li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								Withdrawn Funds
     							</a> </li>
                                     </ul>
@@ -135,7 +136,7 @@ $contact = $row['Contact'];
       
                         <div class="row sameheight-container">
                             <div class="col col-xs-12 col-sm-12 col-md-12 col-xl-12 stats-col">
-                                <div class="card sameheight-item stats" data-exclude="xs">
+                                <div class="sameheight-item stats" data-exclude="xs">
                                     <div class="card-block">
                                         <div class="title-block">
                                             <h4 class="title">
@@ -150,7 +151,7 @@ $contact = $row['Contact'];
 
 
                                                     <div class="value"> <?php echo $user_home -> CountUsers(); ?> </div>
-                                                    <div class="name"> Total Users </div>
+                                                    <div class="name"> Users </div>
                                                 </div> <progress class="progress stat-progress" value="100" max="100">
             					<div class="progress">
             						<span class="progress-bar" style="width: 100%;"></span>
@@ -163,7 +164,7 @@ $contact = $row['Contact'];
                                                 <div class="stat">
 
                                                     <div class="value"> <?php echo $user_home -> CountInvestment(); ?> </div>
-                                                    <div class="name"> Total Investments </div>
+                                                    <div class="name"> Investments </div>
                                                 </div> <progress class="progress stat-progress" value="100" max="100">
             					<div class="progress">
             						<span class="progress-bar" style="width: 100%;"></span>
@@ -177,7 +178,7 @@ $contact = $row['Contact'];
                                                 <div class="stat">
 
                                                     <div class="value"> <?php echo $user_home -> CountPH(); ?> </div>
-                                                    <div class="name">Total Help Offers </div>
+                                                    <div class="name">Offers </div>
                                                 </div> <progress class="progress stat-progress" value="100" max="100">
             					<div class="progress">
             						<span class="progress-bar" style="width: 100%;"></span>
@@ -200,7 +201,7 @@ $contact = $row['Contact'];
                             
                             
                             
-                                            <div class="col-xs-12 col-sm-6  stat-col">
+                                            <div class="col-xs-12 col-sm-12  stat-col">
                                                 <div class="stat-icon"> <i class="fa fa-envelope"></i> </div>
                                                 <div class="stat">
 
@@ -211,18 +212,7 @@ $contact = $row['Contact'];
             						<span class="progress-bar" style="width: 100%;"></span>
             					</div>
             				</progress> </div>
-                            
-                            
-                                            <div class="col-xs-12 col-sm-6  stat-col">
-                                                <div class="stat-icon"> <i class="fa fa-bell-o"></i> </div>
-                                                <div class="stat">
-                                                    <div class="value"> 0 </div>
-                                                    <div class="name"> Kept Funds </div>
-                                                </div> <progress class="progress stat-progress" value="100" max="100">
-            					<div class="progress">
-            						<span class="progress-bar" style="width: 100%;"></span>
-            					</div>
-            				</progress> </div>
+  
                             
                             
                             

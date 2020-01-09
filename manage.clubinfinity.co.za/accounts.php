@@ -130,9 +130,10 @@ $pendingresult=mysql_query($pending);
                                     <a href=""> <i class="fa fa-arrows-h"></i> Assignment &nbsp; <i class="fa fa-caret-down"></i> </a>
                                     
                                     <ul>
-                                        <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                        <!-- <li> <a href="re-payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								Reversed Funds
-    							</a> </li><li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
+                                </a> </li> -->
+                                <li> <a href="payments.php"> <i class="fa fa-caret-right"></i> &nbsp;
     								Withdrawn Funds
     							</a> </li>
                                     </ul>

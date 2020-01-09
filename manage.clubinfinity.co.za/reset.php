@@ -46,7 +46,7 @@ if($reg_user->is_logged_in()!="")
                         <h1 class="auth-title">
         <div class="logo">
         	 <img src="logo.png" style="width:45px; margin-top:-45px;"> 
-        </div>        My <span style="color:#52BCD3;">Admin</span>
+        </div>        <span style="color:#52BCD3;">MyAdmin</span>
       </h1> </header>
                     <div class="auth-content">
                         <p class="text-xs-center">PASSWORD REMINDER</p>

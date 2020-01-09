@@ -4,8 +4,8 @@ class Database
      
     private $host = "localhost";
     private $db_name = "clubinfinity";
-    private $username = "infinity";
-    private $password = "infinity01";
+    private $username = "root";
+    private $password = "";
     public $conn;
      
     public function dbConnection()
