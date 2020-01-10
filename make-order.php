@@ -229,28 +229,9 @@ $bank = $row['bank'];
 
 
 if($user_home->Addhelpers($_SESSION['userSession'],0,$userName,$amount,$bank,$date)){
- 
- 
-
-	
-$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userName=:uid");
-$stmt->execute(array(":uid"=>$row['refferal']));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);	
-	
 	 
 echo "<div class='alert alert-info' role='alert'>
-	<strong> Well done </strong> You are about to place an Order for PH<br>
-	Please make the payment of <strong>R200</strong> to the following member:
-	<br>
-	<br>
-	<br><b>Name:</b> ".$row['Name']."
-	<br><b>Bank Name:</b> ".$row['bank']."
-	<br><b>Account No.:</b> ".$row['account_no']."
-	<br><b>Phone No.:</b> ".$row['Contact']."
-	<br><b>Reference:</b> ".$row['userName']."
-	<br>
-    <br><small>Please note that your PH will not go through until you make he payment.</small>
-	</div>";
+	<strong> Well done </strong> You are about to place an Order for PH<br>";
 	
 }else{
   echo "Something terrible happened..........";

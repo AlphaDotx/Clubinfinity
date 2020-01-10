@@ -26,6 +26,37 @@ class USER
 		return $stmt;
 	}
 	
+
+//------------------------Audit Trail---------------//
+public function getUser($id){
+
+	$sql = "SELECT userName FROM `tbl_users` WHERE userID='$id'"; 
+	$result = $this -> conn->prepare($sql); 
+	$result->execute(); 
+	$user = $result->fetchColumn(); 
+	return $user;
+}
+
+public function auditTrail($userID,$justification,$date){
+
+	try
+	{							
+		$stmt = $this->conn->prepare("INSERT INTO tbl_audit_trail(userID,justification,created_at) 
+													 VALUES(:user_id, :justification, :date)");
+
+		$stmt->bindparam(":user_id",$userID);
+		$stmt->bindparam(":justification",$justification);
+		$stmt->bindparam(":date", $date);
+		$stmt->execute();	
+		return $stmt;
+	}
+	catch(PDOException $ex)
+	{
+		echo $ex->getMessage();
+	}  
+}
+//-----------------------------------------------//
+
 //-------------Dashboard Statistic------------//
 //--------------------------------------------//
 
@@ -167,7 +198,7 @@ public function updateStatus($status,$id){
 
 //------------------------Adding users to Orders---------------//
 
-public function addInvestment($userID,$username,$amount,$bank,$date){
+public function addOrders($userID,$username,$amount,$bank,$date){
 
 	try
 	{							

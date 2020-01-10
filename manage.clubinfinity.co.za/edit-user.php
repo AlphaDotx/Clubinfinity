@@ -140,6 +140,7 @@ $contact = $row['Contact'];
 
 <?php
 if(isset($_POST['btn-submit'])){
+$date = @date('Y M d | H:i:s');
 $Uname = $_POST['uname'];
 $Name = $_POST['name'];
 $Contact = $_POST['contact'];
@@ -149,10 +150,13 @@ $account_no = $_POST['account_no'];
 
 $stmt = $user_home->runQuery("UPDATE tbl_users SET Name=:name_user, Contact=:user_contact, bank=:user_bank, account_no=:user_account_no WHERE userID=:uid");
 $stmt->execute(array(":name_user"=>$Name,":user_contact"=>$Contact,":user_bank"=>$bank,":user_account_no"=>$account_no,":uid"=>$_GET['userid']));
-				
+    
+
 $msg = "<div class='alert alert-success'>
-Changes are successfully saved to member's information record.
-</div>";              
+Changes are successfully saved to ".$Uname.' '.$Name."`s profile record.
+</div>"; 
+
+$user_home->auditTrail($_SESSION['userSession'], 'edited '.$Name.' '.$Uname.'`s profile record', $date);
 }
 ?>
 <form action="#" method="post" class="mt" role="form">
@@ -173,6 +177,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                                         <section class="example">
                                     
                                       <div class="form-group has-success"> <label class="control-label" for="inputSuccess1">Username:</label> <input type="text" name="uname" value="<?php echo $row['userName']; ?>" disabled class="form-control underlined" id="inputSuccess1"  ></div>
+                                      <input type="hidden" class="form-control underlined" name="uname" value="<?php echo $row['userName']; ?>"  id="inputError1">
                                         <div class="form-group has-success"> <label class="control-label" for="inputSuccess1">Full Names:</label> <input type="text" name="name" value="<?php echo $row['Name']; ?>" class="form-control underlined" id="inputSuccess1"  ></div>
                                         <div class="form-group has-success">
                                         <label class="control-label" for="inputWarning1">Contact Number:</label> <input type="text" name="contact" value="<?php echo $row['Contact']; ?>" class="form-control underlined" id="inputWarning1"  > </div>

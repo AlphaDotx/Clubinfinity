@@ -32,12 +32,9 @@ $userrow = $stmt->fetch(PDO::FETCH_ASSOC);
 $username = $userrow['userName'];
 $bank = $userrow['bank'];
 
-$user_home -> addInvestment($id,$username,$amount,$bank,$date);
+$user_home -> addOrders($id,$username,$amount,$bank,$date);
 
-$mylog = fopen("logs.txt", "a") or die("Unable to open file!");
-$txt = $admin_name." have added ".$username." to orders for payment of R".$amount." on ".$date;
-fwrite($mylog, "\n". $txt);
-fclose($mylog);
+$user_home->auditTrail($_SESSION['userSession'], ' added '.$username.' to payment orders for an amount of '.$amount, $date);
 
 header('location: users.php?code=700&name='.$username);
 exit();

@@ -219,7 +219,7 @@ if($row['status'] == 0){
  <?php
 }
 ?>     
-<li><a href="cancel.php?traceid=<?php echo $row['traceid']; ?>?link=<?php echo $link; ?>"  onclick="return confirm('Are you sure you want to reverse this transaction? \n No that the payer will be blocked and the receiver will be returned to payments')"> &nbsp;&nbsp; <i class="fa fa-trash" aria-hidden="true"></i> Cancel </a></li>
+<li><a href="cancel.php?traceid=<?php echo $row['traceid']; ?>&link=<?php echo $link; ?>"  onclick="return confirm('Are you sure you want to reverse this transaction? \n No that the payer will be blocked and the receiver will be returned to payments')"> &nbsp;&nbsp; <i class="fa fa-trash" aria-hidden="true"></i> Cancel </a></li>
     
 </ul>
 </div>
