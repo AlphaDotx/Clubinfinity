@@ -193,7 +193,7 @@ while($row = $stmt->fetch()) {
 <ul class="dropdown-menu">
 
 <li><a href="edit-invested.php?trace=<?php echo $row['traceid']; ?>">&nbsp;&nbsp;<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a></li>
-<li><a href="delete-investment.php?traceid=<?php echo $row['traceid']; ?>"  onclick="return confirm('NB: Before you withdraw the investment, make sure that its the correct one!, Are you sure you want to WITHDRAW this funds? \n There is NO UNDO! \n\n Please note that this transaction will only be removed from INVESTMENTS.')">&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> Withdraw</a></li>
+<li><a href="delete-investment.php?traceid=<?php echo $row['traceid']; ?>"  onclick="return confirm('NB: Before you withdraw the investment, make sure that its the correct one!, Are you sure you want to WITHDRAW this funds? \n There is NO UNDO! \n\n Please note that this transaction will only be removed from INVESTMENTS.')">&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> Remove</a></li>
 </ul>
 </div>
 

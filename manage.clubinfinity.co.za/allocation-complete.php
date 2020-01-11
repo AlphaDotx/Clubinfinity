@@ -52,6 +52,10 @@ header("location: allocation.php?code=600");
 $change = $amount - $helperoffer;
 
 if($change == 0){
+//auditTrail
+$user_home->auditTrail($_SESSION['userSession'], 'allocated '.$helpername.' to '.$username.' for the amount of '.$helperoffer, $date);
+
+
 $file = 'multiple/count.txt';
 $new_traceid = file_get_contents($file);
 $fdata = intval($new_traceid)+1;
@@ -82,6 +86,9 @@ $test->checkcredits(); //Check your credit balance
 header("location: ".$link."?code=701&&helper=".$helpername."&&offer=".$helperoffer."&&user=".$username);
 
 }else{
+
+  //Audit Trail
+  $user_home->auditTrail($_SESSION['userSession'], 'allocated '.$helpername.' to '.$username.' for the amount of '.$helperoffer, $date);
 
 $file = 'multiple/count.txt';
 $new_traceid = file_get_contents($file);
