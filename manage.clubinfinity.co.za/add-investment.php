@@ -144,8 +144,8 @@ $contact = $row['Contact'];
     <form role="form" action="make-order.php" method="POST">
      <div class="form-group has-error">
          <label class="control-label" for="inputError1">You are about to place an investment for <strong> <?php echo $_GET['name']; ?></strong></label> 
-        <select name="amount" class="form-control boxed" id="inputError1">
-                     <option value="">Make a select here!</option>
+        <input type="text" name="amount" class="form-control boxed" placeholder="Enter amount" id="inputError1">
+                     <!-- <option value="">Make a select here!</option>
                      <option value="200">R200</option>
                      <option value="400">R400</option>
                      <option value="500">R500</option>
@@ -153,7 +153,7 @@ $contact = $row['Contact'];
                      <option value="2000">R2000</option>
                      <option value="3000">R3000</option>
                      <option value="4000">R4000</option>
-                     <option value="5000">R5000</option>
+                     <option value="5000">R5000</option> -->
                      <!-- <option value="6000">R6000</option>
                      <option value="6500">R6500</option>
                      <option value="7000">R7000</option>
@@ -184,7 +184,7 @@ $contact = $row['Contact'];
                      <option value="190000">R190 000</option>
                      <option value="200000">R200 000</option> -->
                      </select>
-        <span class="has-info">Select the desired amount you would like to invest.
+        <!-- <span class="has-info">Select the desired amount you would like to invest. -->
         </span> 
         </div>
         
