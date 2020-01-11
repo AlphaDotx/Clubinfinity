@@ -169,9 +169,9 @@ Please make a payment to your recruiter to the details below.
                     <input class="form-control" name="txtupass" placeholder="Password" type="password">
                   </div>
                 </div>
-                <div class="col-12">
+                <!-- <div class="col-12">
               <a href="register.php?code=MQ==" class="text-light"><small>Create new account</small></a>
-            </div>
+            </div> -->
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary my-4" name="btn-login">Sign in</button>
                 </div>

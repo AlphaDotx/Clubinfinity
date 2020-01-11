@@ -232,12 +232,12 @@ if(isset($_POST['update'])){
       <!--               </label>-->
       <!--                     </div>-->
                                 
-                           <div>
+                           <!-- <div>
                             <label>
                          <input class="radio" type="radio" name="amount" value="400">
                          <span>R400</span>
                      </label>
-                           </div>
+                           </div> -->
                                 
 
                             <div> 
@@ -254,12 +254,12 @@ if(isset($_POST['update'])){
                      </label>
                            </div>
                                
-                           <!--div>
+                           <div>
                             <label>
                          <input class="radio" type="radio" name="amount" value="1500">
                          <span>R1 500</span>
                      </label>
-                           </div-->    
+ </div>    
                          
                            <div>
                             <label>
@@ -268,12 +268,12 @@ if(isset($_POST['update'])){
                      </label>
                            </div>
                            
-                           <!--div>
+                           <div>
                             <label>
                          <input class="radio" type="radio" name="amount" value="2500">
                          <span>R2 500</span>
                      </label>
-                           </div-->
+ </div>
                            
                            <div>
                             <label>
@@ -282,12 +282,12 @@ if(isset($_POST['update'])){
                      </label>
                            </div>
                            
-                           <!--div>
+                           <div>
                             <label>
                          <input class="radio" type="radio" name="amount" value="3500">
                          <span>R3 500</span>
                      </label>
-                           </div-->
+ </div>
                            
                            <div>
                             <label>
@@ -296,12 +296,12 @@ if(isset($_POST['update'])){
                      </label>
                            </div>
                            
-                           <!--div>
+                           <div>
                             <label>
                          <input class="radio" type="radio" name="amount" value="4500">
                          <span>R4 500</span>
                      </label>
-                           </div-->
+ </div>
                            
                            <div>
                             <label>

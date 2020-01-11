@@ -18,5 +18,5 @@ if(isset($_POST['submit'])){
 
 }
 
-header("location: dl.php?code=700");
+header("location: followers.php?code=700");
 ?>

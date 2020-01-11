@@ -231,7 +231,7 @@ $bank = $row['bank'];
 if($user_home->Addhelpers($_SESSION['userSession'],0,$userName,$amount,$bank,$date)){
 	 
 echo "<div class='alert alert-info' role='alert'>
-	<strong> Well done </strong> You are about to place an Order for PH<br>";
+	<strong> Well done </strong> You are about to place an order to provude help, Please note that allocations will take place within 24hours. <br>";
 	
 }else{
   echo "Something terrible happened..........";

@@ -221,7 +221,7 @@ if($row['userStatus']=="N"){
 </td>
 <td>
 <?php
-if($_SESSION['userSession'] == '25' OR $_SESSION['userSession'] == '26' OR $_SESSION['userSession'] == '3' OR $_SESSION['userSession'] == '4101' OR $_SESSION['userSession'] == '4102' ){
+if($_SESSION['userSession'] == '1' OR $_SESSION['userSession'] == '2' OR $_SESSION['userSession'] == '6' OR $_SESSION['userSession'] == '25' OR $_SESSION['userSession'] == '4102' ){
 ?>
 <div class="btn-group">
 <button class="btn btn-warning btn-sm">Action</button>
