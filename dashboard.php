@@ -529,16 +529,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                   <div class="modal-footer">
 
-<?php
-if(@date("Y-m-d H:i:s") >= $mdate ){
-?>
                       <form action="withdraw.php" method="post">
                         <input type="hidden" name="traceid" value="<?php echo $row['traceid']; ?>" ?>
                       <button type="submit" class="btn btn-primary">Withdraw Funds</button>
 </form>
-<?php
-}
-?>
 
                       <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button> 
                   </div>
