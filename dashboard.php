@@ -102,6 +102,19 @@ CountUp.prototype.update=function(id){
     setTimeout(function(){self.update(id);}, 1000);
 }
 </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e16c30c7e39ea1242a3bdb2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -514,7 +527,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                   <i class="far fa-clock fa-8x"></i>
 
                       <p><div id="counter" ></div>.</p>
-                      <p>You have privided the help of <b>R<?php echo $row['price']; ?></b> on this date <b><?php echo $date = $row['date']; ?></b>, which will mature on <b><?php echo $mdate = $row['mdate']; ?></b> with a balance of <b>R<?php echo $row['price']*2; ?></b>.</p>
+                      <p>You have privided the help of <b>R<?php echo $row['price']; ?></b> on this date <b><?php echo $date = $row['date']; ?></b>, 
+                      which will mature on <b><?php echo $mdate = $row['mdate']; ?></b> with a balance of <b>R<?php echo $row['price']*2; ?></b>.</p>
                       
                   </div>
 </div>
