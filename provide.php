@@ -355,7 +355,7 @@ while($row = $stmt->fetch()) {
         </div>
         <p class="mt-3 mb-0 text-muted text-sm">
             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> +100%</span>
-            <span class="text-nowrap">In 7 days of payment</span>
+            <span class="text-nowrap">In 4 days of payment</span>
         </p>
     </div>
 </div>
