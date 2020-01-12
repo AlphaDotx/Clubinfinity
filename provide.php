@@ -213,8 +213,6 @@ if(isset($_POST['update'])){
 }
 
 
- if($user_home -> Check_tempPH($_SESSION['userSession']) == 0){
-
 //-----------------check if there's any pending PH-----------------//
  if($user_home -> CheckPH($_SESSION['userSession']) == 0){
  ?>
@@ -367,40 +365,7 @@ while($row = $stmt->fetch()) {
 <?php
     }
  }
-}else{
-   ?> 
-<div class="card">
-    <div class="card-body">
-      <h1 class="card-title">Upliner Banking Information</h1>
-      <div class="alert alert-info" role="alert">
-        <span class="alert-inner--icon"><i class="fas fa-info-circle"></i></span>
-        <span class="alert-inner--text"><strong>Info!</strong> This is a notice to make a payment of <b>R200</b> to your recruiter using the following details.</span>
-    </div>
-      <?php
 
-$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userName=:ud");
-$stmt->execute(array(":ud"=>$row['refferal']));
-$urow = $stmt->fetch(PDO::FETCH_ASSOC);
-
-$uname = $urow['userName'];
-$name = $urow['Name'];
-$ucontact = $urow['Contact'];
-$ubank = $urow['bank'];
-$uaccount_no = $urow['account_no'];
-
-echo '<p>
-<span style="font-weight:600; font-size:15px;">Account Holder:</span> '.$name.'<br>
-<span style="font-weight:600; font-size:15px;">Contact Number:</span> '.$ucontact.'<br>
-<span style="font-weight:600; font-size:15px;">Bank Name:</span> '.$ubank.'<br>
-<span style="font-weight:600; font-size:15px;">Account Number:</span> '.$uaccount_no.'<br>
-<span style="font-weight:600; font-size:15px;">Reference: </span> '. $uname.'</br>
-</ul></p>';
-
-?>   
-    </div>
-  </div>    
-  <?php  
-}
  ?>
   </div>
   
@@ -429,13 +394,17 @@ echo '<p>
 
                     <select class="form-control" name="price">
                       <option disabled=disabled>---------select new amount-------</option>
-                      <option value="200"> R200</option>
-                      <option value="400"> R400</option>
+                      <!-- <option value="200"> R200</option> -->
+                      <!-- <option value="400"> R400</option> -->
                       <option value="500"> R500</option>
                       <option value="1000"> R1 000</option>
+                      <option value="1500"> R1 500</option>
                       <option value="2000"> R2 000</option>
+                      <option value="2500"> R2 500</option>
                       <option value="3000"> R3 000</option>
+                      <option value="3500"> R3 500</option>
                       <option value="4000"> R4 000</option>
+                      <option value="4500"> R4 500</option>
                       <option value="5000"> R5 000</option>
                     </select>
                 </div>
