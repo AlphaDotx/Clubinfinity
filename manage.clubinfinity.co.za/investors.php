@@ -194,6 +194,7 @@ while($row = $stmt->fetch()) {
 <ul class="dropdown-menu">
 
 <li><a href="edit-offers.php?trace=<?php echo $row['traceid']; ?>"> &nbsp;&nbsp;<i class="fa fa-check-square-o" aria-hidden="true"></i> Edit</a></li>
+<li><a href="delete-order.php?traceid=<?php echo $row['traceid']; ?>"  onclick="return confirm('NB: Before you delete an order, make sure that its the correct one!, Are you sure you want to DELETE this funds? \n There is NO UNDO! \n\n Please note that this order will only be removed from PERMANENTLY.')">&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> Remove</a></li>
 
 </ul>
 </div>

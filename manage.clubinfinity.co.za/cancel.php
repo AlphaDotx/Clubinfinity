@@ -25,6 +25,6 @@ $user_home -> updateStatus("N",$myid);
 $user_home -> AddOrders($userid,$user,$amount,$bank,$date);
 
 $user_home->auditTrail($_SESSION['userSession'], 'cancelled transaction with a reference no. '.$_GET['traceid'], $date);
-$user_home->redirect($link."?code=700");
+$user_home->redirect($link."?code=702");
 }
 ?>

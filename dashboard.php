@@ -531,7 +531,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                       <form action="withdraw.php" method="post">
                         <input type="hidden" name="traceid" value="<?php echo $row['traceid']; ?>" ?>
-                      <button type="submit" class="btn btn-primary">Withdraw Funds</button>
+                      <button type="submit" name="btn-submit" class="btn btn-primary">Withdraw Funds</button>
 </form>
 
                       <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button> 

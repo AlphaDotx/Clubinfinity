@@ -151,11 +151,13 @@ if(isset($_GET['code'])){
      if($_GET['code'] == 700){
         ?>    
 	<div class="alert alert-success">You have successfully accepted payment. Thank you</div>       
-    <?php 
+<?php 
     }elseif ($_GET['code'] == 701){ 
   ?>
   <div class="alert alert-success">Transaction record is successfully deleted!</div>  
 <?php
+}elseif($_GET['code'] == 702){
+    echo '<div class="alert alert-success"> Transaction was successfully cancelled.';
 }
 }
 ?>

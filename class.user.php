@@ -71,17 +71,6 @@ public function Check_Existing_User($user){
     
 }
 
-//----------Withdwrawing investment-----------------//
-public function withdrawal($traceid){
-	try{
-	$sql = "DELETE FROM tbl_waitinglist WHERE traceid='$traceid'"; 
-	$result = $this -> conn->prepare($sql); 
-	$result->execute(); 
-	return true;
-	}catch(PDOException $ex){
-		echo $ex->getMessage();
-	}
-}
 
 //----------Updating PH-----------------//
 public function updatePH($price,$trace){
@@ -174,6 +163,29 @@ public function CheckPH($id){
 	$num_rows = $result->fetchColumn(); 
 	return $num_rows;
 	}
+
+//------------------------Adding users to Orders---------------//
+
+public function addOrders($userID,$username,$amount,$bank,$date){
+
+	try
+	{							
+		$stmt = $this->conn->prepare("INSERT INTO tbl_orders(userID,name,price,bank,date) 
+													 VALUES(:user_id, :user_name, :amount, :bank, :date)");
+
+		$stmt->bindparam(":user_id",$userID);
+		$stmt->bindparam(":user_name",$username);
+		$stmt->bindparam(":amount",$amount);
+		$stmt->bindparam(":bank",$bank);
+		$stmt->bindparam(":date", $date);
+		$stmt->execute();	
+		return $stmt;
+	}
+	catch(PDOException $ex)
+	{
+		echo $ex->getMessage();
+	}  
+}
 
 //-------------Registering----------//
 	public function register($uname,$name,$contact,$upass,$code,$bank,$account_no,$keep,$refferal)
@@ -302,6 +314,34 @@ public function activateFollower($id){
 		echo $ex->getMessage();
 	}
 }
+
+
+
+//----------------------History Status Update--------------//
+public function updateHistoryStatus($traceid){
+	try{
+	$sql = "UPDATE tbl_history SET status='1' WHERE traceid='$traceid'"; 
+	$result = $this -> conn->prepare($sql); 
+	$result->execute(); 
+	return true;
+	}catch(PDOException $ex){
+		echo $ex->getMessage();
+	}
+}
+
+
+//----------Confirmation of Funds-----------------//
+public function deleteInvestment($traceid){
+	try{
+	$sql = "DELETE FROM tbl_waitinglist WHERE traceid='$traceid'"; 
+	$result = $this -> conn->prepare($sql); 
+	$result->execute(); 
+	return true;
+	}catch(PDOException $ex){
+		echo $ex->getMessage();
+	}
+}
+
 //--------------------Signing in-------------------//	
 	public function login($email,$upass)
 	{
