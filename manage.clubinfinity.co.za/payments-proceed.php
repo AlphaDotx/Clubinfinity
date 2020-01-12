@@ -42,7 +42,7 @@ $orderid = $lrow['traceid'];
 
     
 switch ($amount){
-	case 200: 
+	case 500: 
 
 $stmt = $user_home->runQuery("SELECT * FROM tbl_helpers WHERE price=:price AND date < :date LIMIT 1");
 $stmt->execute(array(":price"=>$amount,":date"=>$date));
@@ -61,6 +61,9 @@ $helperrow = $stmt->fetch(PDO::FETCH_ASSOC);
 $helpername = $helperrow['userName'];
 $helpercontact = $helperrow['Contact'];
     
+//auditTrail
+$user_home->auditTrail($_SESSION['userSession'], 'allocated '.$helpername.' to '.$username.' for the amount of '.$helperoffer, $date);
+
 $file = 'count.txt';
 $new_traceid = file_get_contents($file);
 $fdata = intval($new_traceid)+1;
@@ -92,7 +95,7 @@ $err = $err + 1;
  
 break;
         
-case 500:
+case 1000:
 
 $stmt = $user_home->runQuery("SELECT * FROM tbl_helpers WHERE price=:price AND date < :date LIMIT 1");
 $stmt->execute(array(":price"=>$amount,":date"=>$date));
@@ -111,6 +114,10 @@ $helperrow = $stmt->fetch(PDO::FETCH_ASSOC);
 $helpername = $helperrow['userName'];
 $helpercontact = $helperrow['Contact'];
     
+//auditTrail
+$user_home->auditTrail($_SESSION['userSession'], 'allocated '.$helpername.' to '.$username.' for the amount of '.$helperoffer, $date);
+
+
 $file = 'count.txt';
 $new_traceid = file_get_contents($file);
 $fdata = intval($new_traceid)+1;
@@ -140,7 +147,7 @@ $suc = $suc + 1;
         
 break;
         
-case 1000:
+case 1500:
 
 $stmt = $user_home->runQuery("SELECT * FROM tbl_helpers WHERE price=:price AND date < :date LIMIT 1");
 $stmt->execute(array(":price"=>$amount,":date"=>$date));
@@ -159,6 +166,9 @@ $helperrow = $stmt->fetch(PDO::FETCH_ASSOC);
 $helpername = $helperrow['userName'];
 $helpercontact = $helperrow['Contact'];
     
+//auditTrail
+$user_home->auditTrail($_SESSION['userSession'], 'allocated '.$helpername.' to '.$username.' for the amount of '.$helperoffer, $date);
+
 $file = 'count.txt';
 $new_traceid = file_get_contents($file);
 $fdata = intval($new_traceid)+1;
