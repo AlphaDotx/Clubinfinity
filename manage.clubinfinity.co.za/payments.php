@@ -165,7 +165,11 @@ echo  "<div class='alert alert-success'>
  echo '<div class="alert alert-danger fade in">
          <strong>Success!</strong> Funds are successfully deleted from the payments</a>.
       </div>';   
-}elseif($_GET['code']==701){
+}elseif($_GET['code']==602){
+    echo '<div class="alert alert-warning fade in">
+            <strong>Warning</strong> You are trying to allocate PH that is greater than GH</a>.
+         </div>';   
+   }elseif($_GET['code']==701){
  echo '<div class="alert alert-success fade in">
          <strong>Success!</strong> You successfully allocated <b>'.$helpername.'</b> to make the payment of <b>R'.$helperoffer.'</b> to <b>'.$username.'</b></a>.
       </div>';   
