@@ -45,7 +45,7 @@ $helpername = $helperrow['userName'];
 $helpercontact = $helperrow['Contact'];
 
 if($amount < $helperoffer){
-header("location: payments.php?code=600");      
+header("location: payments.php?code=602");      
   exit();
 }
 
